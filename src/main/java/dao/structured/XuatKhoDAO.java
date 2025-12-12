@@ -1,4 +1,4 @@
-package dao;
+package dao.structured;
 
 import db.DBUtil;
 import model.XuatKho;

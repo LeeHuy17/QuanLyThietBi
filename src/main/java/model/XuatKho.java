@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class XuatKho {
+public class XuatKho implements Serializable {
     private int idXuat;         // idPK
     private int idThietBi;      // FK
     private int soLuong;

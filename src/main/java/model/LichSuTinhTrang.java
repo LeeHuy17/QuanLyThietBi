@@ -1,61 +1,64 @@
 package model;
 
-public class LichSuTinhTrang {
-    private String maThietBi;
-    private String tenThietBi;
-    private String ngayBaoLoi;
-    private String moTaLoi;
-    private String tinhTrang;
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class LichSuTinhTrang implements Serializable {
+    private int idThietBi;
+    private String tinhTrangCu;
+    private String tinhTrangMoi;
+    private LocalDate ngayCapNhat;
+    private String ghiChu;
 
     public LichSuTinhTrang() {
     }
 
-    public LichSuTinhTrang(String maThietBi, String tenThietBi,
-                           String ngayBaoLoi, String moTaLoi, String tinhTrang) {
-        this.maThietBi = maThietBi;
-        this.tenThietBi = tenThietBi;
-        this.ngayBaoLoi = ngayBaoLoi;
-        this.moTaLoi = moTaLoi;
-        this.tinhTrang = tinhTrang;
+    public LichSuTinhTrang(int idThietBi, String tinhTrangCu, String tinhTrangMoi,
+                           LocalDate ngayCapNhat, String ghiChu) {
+        this.idThietBi = idThietBi;
+        this.tinhTrangCu = tinhTrangCu;
+        this.tinhTrangMoi = tinhTrangMoi;
+        this.ngayCapNhat = ngayCapNhat;
+        this.ghiChu = ghiChu;
     }
 
-    public String getMaThietBi() {
-        return maThietBi;
+    public int getIdThietBi() {
+        return idThietBi;
     }
 
-    public void setMaThietBi(String maThietBi) {
-        this.maThietBi = maThietBi;
+    public void setIdThietBi(int idThietBi) {
+        this.idThietBi = idThietBi;
     }
 
-    public String getTenThietBi() {
-        return tenThietBi;
+    public String getTinhTrangCu() {
+        return tinhTrangCu;
     }
 
-    public void setTenThietBi(String tenThietBi) {
-        this.tenThietBi = tenThietBi;
+    public void setTinhTrangCu(String tinhTrangCu) {
+        this.tinhTrangCu = tinhTrangCu;
     }
 
-    public String getNgayBaoLoi() {
-        return ngayBaoLoi;
+    public String getTinhTrangMoi() {
+        return tinhTrangMoi;
     }
 
-    public void setNgayBaoLoi(String ngayBaoLoi) {
-        this.ngayBaoLoi = ngayBaoLoi;
+    public void setTinhTrangMoi(String tinhTrangMoi) {
+        this.tinhTrangMoi = tinhTrangMoi;
     }
 
-    public String getMoTaLoi() {
-        return moTaLoi;
+    public LocalDate getNgayCapNhat() {
+        return ngayCapNhat;
     }
 
-    public void setMoTaLoi(String moTaLoi) {
-        this.moTaLoi = moTaLoi;
+    public void setNgayCapNhat(LocalDate ngayCapNhat) {
+        this.ngayCapNhat = ngayCapNhat;
     }
 
-    public String getTinhTrang() {
-        return tinhTrang;
+    public String getGhiChu() {
+        return ghiChu;
     }
 
-    public void setTinhTrang(String tinhTrang) {
-        this.tinhTrang = tinhTrang;
+    public void setGhiChu(String ghiChu) {
+        this.ghiChu = ghiChu;
     }
 }

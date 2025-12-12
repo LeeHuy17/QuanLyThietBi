@@ -1,11 +1,9 @@
-package dao;
+package dao.structured;
 
 import db.DBUtil;
 import model.NhapKho;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class NhapKhoDAO {
 

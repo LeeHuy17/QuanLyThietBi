@@ -1,0 +1,16 @@
+package commons;
+
+public enum Action {
+    GET_ALL_THIET_BI,
+    INSERT_THIET_BI,
+    UPDATE_THIET_BI,
+    DELETE_THIET_BI,
+    UPDATE_TINH_TRANG,
+    SEARCH_THIET_BI,
+
+    NHAP_KHO,
+    XUAT_KHO,
+    GET_TON_KHO,
+    GET_THIET_BI_HONG,
+    GET_DANG_SU_DUNG
+}
