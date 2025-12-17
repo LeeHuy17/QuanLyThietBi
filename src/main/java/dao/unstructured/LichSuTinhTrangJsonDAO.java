@@ -1,6 +1,8 @@
 package dao.unstructured;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import model.LichSuTinhTrang;
 import util.JsonUtil;
 
@@ -20,6 +22,9 @@ public class LichSuTinhTrangJsonDAO {
             if (!file.exists()) return new ArrayList<>();
 
             ObjectMapper mapper = new ObjectMapper();
+            mapper.registerModule(new JavaTimeModule());
+            mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
             LichSuTinhTrang[] arr = mapper.readValue(file, LichSuTinhTrang[].class);
 
             // chuyển sang ArrayList để có thể add()

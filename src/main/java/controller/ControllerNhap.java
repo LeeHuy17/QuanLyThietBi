@@ -59,10 +59,10 @@ public class ControllerNhap {
         // 5. Ghi lịch sử tình trạng (nếu là thiết bị mới)
         LichSuTinhTrang log = new LichSuTinhTrang(
                 nk.getIdThietBi(),
-                "Mới nhập kho",
-                tb.getTinhTrang(),      // tình trạng cũ = trạng thái hiện tại
+                tb.getTinhTrang(),      // tinhTrangCu
+                tb.getTinhTrang(),      // tinhTrangMoi (không đổi)
                 LocalDate.now(),
-                "Nhập kho số lượng: " + nk.getSoLuong()
+                "Mới nhập kho, SL: " + nk.getSoLuong()
         );
         lichSuDAO.insert(log);
 

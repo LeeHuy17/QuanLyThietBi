@@ -20,7 +20,6 @@ CREATE TABLE NhapKho (
         ON UPDATE CASCADE
 );
 
-
 CREATE TABLE XuatKho (
     idXuat INT AUTO_INCREMENT PRIMARY KEY,
     idThietBi INT NOT NULL,

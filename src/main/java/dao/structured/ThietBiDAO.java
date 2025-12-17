@@ -128,9 +128,9 @@ public class ThietBiDAO {
         }
     }
 
-    // Cập nhật tình trạng
+//     Cập nhật tình trạng
     public boolean updateTinhTrang(int idThietBi, String tinhTrang) {
-        String sql = "UPDATE ThietBi SET tinhTrang=? moTa=? WHERE idThietBi=?";
+        String sql = "UPDATE ThietBi SET tinhTrang=? WHERE idThietBi=?";
 
         try (Connection conn = DBUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
